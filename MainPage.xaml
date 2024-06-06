@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DVExamen2.MainPage">
+
+    <ScrollView>
+        <StackLayout Padding="30">
+
+            <Label Text="Ingrese su número telefónico:" 
+                   x:Name="lblDV"
+                   FontSize="Medium" />
+            <Entry x:Name="entDV"
+                   Placeholder="Número Telefónico" 
+                   Keyboard="Telephone" />
+
+            <Label Text="Seleccione su operador telefónico:" 
+                   x:Name="lblOperadorDV"
+                   FontSize="Medium" />
+            <Picker x:Name="pickOperadorDV">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Operador 1</x:String>
+                        <x:String>Operador 2</x:String>
+                        <x:String>Operador 3</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Seleccione el monto de la recarga:" 
+                   x:Name="lblMontoDV"
+                   FontSize="Medium" />
+            <StackLayout>
+                <RadioButton Content="3" GroupName="monto" CheckedChanged="OnCheckedChanged" x:Name="rb3DV" />
+                <RadioButton Content="5" GroupName="monto" CheckedChanged="OnCheckedChanged" x:Name="rb5DV" />
+                <RadioButton Content="10" GroupName="monto" CheckedChanged="OnCheckedChanged" x:Name="rb10DV" />
+            </StackLayout>
+
+            <Button Text="Realizar Recarga" 
+                    x:Name="btnRecargarDV"
+                    Clicked="OnRecargarClicked" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
