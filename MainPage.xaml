@@ -19,9 +19,9 @@
             <Picker x:Name="pickOperadorDV">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
-                        <x:String>Operador 1</x:String>
-                        <x:String>Operador 2</x:String>
-                        <x:String>Operador 3</x:String>
+                        <x:String>Movistar</x:String>
+                        <x:String>Claro</x:String>
+                        <x:String>Tuenti</x:String>
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
