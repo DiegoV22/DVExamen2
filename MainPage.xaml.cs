@@ -31,12 +31,6 @@ namespace DVExamen2
             else if (rb5DV.IsChecked) monto = "5";
             else if (rb10DV.IsChecked) monto = "10";
 
-            if (string.IsNullOrEmpty(numero) || string.IsNullOrEmpty(operador) || string.IsNullOrEmpty(monto))
-            {
-                await DisplayAlert("Error", "Por favor complete todos los campos antes de recargar.", "OK");
-                return;
-            }
-
             bool confirm = await DisplayAlert("Confirmar Recarga", $"Número: {numero}\nOperador: {operador}\nMonto: {monto} unidades\n¿Desea continuar?", "Sí", "No");
             if (confirm)
             {
