@@ -52,6 +52,8 @@ namespace DVExamen2
 
                 string contenidoArchivo = File.ReadAllText(rutaArchivo);
                 await DisplayAlert("Contenido del Archivo", contenidoArchivo, "OK");
+
+                await DisplayAlert("Gracias", "Gracias por usar nuestro servicio de recargas.", "OK");
             }
         }
     }
